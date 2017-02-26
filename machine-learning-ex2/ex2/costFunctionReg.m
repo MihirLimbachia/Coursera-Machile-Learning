@@ -6,7 +6,6 @@ function [J, grad] = costFunctionReg(theta, X, y, lambda)
 
 % Initialize some useful values
 m = length(y); % number of training examples
-
 % You need to return the following variables correctly 
 z=sigmoid(X*theta);
 v1=-1.*(y.*log(z));
