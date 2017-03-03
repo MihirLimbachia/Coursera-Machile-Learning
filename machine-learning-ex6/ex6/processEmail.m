@@ -74,11 +74,9 @@ while ~isempty(email_contents)
     if length(str) < 1
        continue;
     end
-    for i=1:1:size(vocabList,1)
-    z=strcmp(str, vocabList(i));
-        if z==1
-            word_indices = [word_indices; i];
-        end
+    idx = strmatch(str, vocabList, 'exact');
+    if ~isempty(idx)
+        word_indices = [word_indices; idx];
     end
     % Look up the word in the dictionary and add to word_indices if
     % found
