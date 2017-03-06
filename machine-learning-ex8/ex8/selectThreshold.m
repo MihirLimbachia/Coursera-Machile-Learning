@@ -31,7 +31,7 @@ for epsilon = min(pval):stepsize:max(pval)
     Precision= TP/TotP;
     Recall = TP/AcP;
 
-    F1=(Precision*Recall)/(Precision + Recall);
+    F1=2*(Precision*Recall)/(Precision + Recall);
 
     % =============================================================
 
